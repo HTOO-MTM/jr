@@ -1,0 +1,722 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------------------------------------------------
+ *  1.基本情報
+ * --------------------------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "DIN";
+    font-weight: 400;
+    src: url("../fonts/DIN-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Helvetica";
+    font-weight: 700;
+    src: url("../fonts/Helvetica-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Hiragino Kaku Gothic stdN W3";
+    src: url("../fonts/Hiragino-Kakugo-StdNW3.otf");
+}
+
+@font-face {
+    font-family: "Hiragino Kaku Gothic stdN W5";
+    src: url("../fonts/Hiragino-Kakugo-StdNW5.otf");
+}
+
+@font-face {
+    font-family: "Kozuka Gothic Pro R";
+    src: url("../fonts/KozGoPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "Toppan Bunkyu Midashi Gothic ExtraBold";
+    src: url("../fonts/ToppanBunkyuMidashiGothicStdN-ExtraBold.otf");
+}
+
+@font-face {
+    font-family: "Acumin Pro Condensed";
+    src: url("../fonts/Acumin-Pro-Cond-Black-Italic.otf");
+}
+
+body {
+    line-height: 1.6;
+    margin: 0 auto;
+    color: #014a9c;
+    font-family: "Toppan Bunkyu Midashi Gothic ExtraBold", sans-serif;
+    font-size: 16px;
+    /*max-width: 1920px;*/
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.3s ease-in;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    content: ".";
+}
+
+ul li {
+    list-style: none;
+}
+
+.pc {
+    display: block;
+}
+
+.sp {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Common */
+.container {
+    width: 30%;
+    margin: 0 auto;
+    max-width: 409px;
+}
+
+.l-inner {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 367px;
+}
+
+.mv-sec {
+    display: flex;
+    position: relative;
+    background-color: #d3f0ff;
+}
+
+.mv-left,
+.mv-right {
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.mv-left {
+    padding-bottom: 207px;
+}
+
+.mv-left .mv-left__logo {
+    width: 57%;
+    margin: 0 auto;
+    max-width: 269px;
+}
+
+.mv-left .anchor {
+    width: 65%;
+    margin: 58px auto 0;
+    max-width: 300px;
+}
+
+.mv-left .anchor .anchor__list:not(:last-child) {
+    margin-bottom: 39px;
+}
+
+.mv-left .anchor .anchor__img {
+    position: relative;
+}
+
+.mv-left .anchor .anchor__img::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background: url("../image/ico_arr.png") no-repeat center/contain;
+    content: "";
+    transform: translateY(-50%);
+}
+
+.mv-right {
+    padding-bottom: 166px;
+    font-size: 24px;
+}
+
+.mv-right .mv-right__ttl {
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom, transparent 75%, #ffff00b3 25%);
+    text-align: center;
+}
+
+.member {
+    width: 322px;
+    margin: 38px auto 0;
+}
+
+.member .step {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 3px;
+    padding-bottom: 10px;
+}
+
+.member .step:not(:last-child)::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: url("../image/ico_down.png") no-repeat center/contain;
+    content: "";
+    transform: translateX(-50%);
+}
+
+.step .step__no {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21%;
+    height: 70px;
+    margin-right: 14px;
+    background: url("../image/img_yellow_list.png") no-repeat center/cover;
+    max-width: 66px;
+}
+
+.step .step__txt {
+    width: 75%;
+}
+
+.wester-logo {
+    position: absolute;
+    right: 0;
+    bottom: 4%;
+    padding-right: 20px;
+}
+
+.mv-mid {
+    width: 100%;
+}
+
+.mv-main {
+    padding-bottom: 40px;
+    background: url("../image/img_mv_bg.jpg") no-repeat center/cover;
+}
+
+.mv-mid .mv-main-img {
+    width: 100%;
+    max-width: 409px;
+}
+
+.mv-main-txt {
+    display: block;
+    position: relative;
+    line-height: 2.2;
+    padding: 23px 0 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.mv-main-txt::before,
+.mv-main-txt::after {
+    position: absolute;
+    top: 55%;
+    width: 74px;
+    height: 1px;
+    background-color: #014a9c;
+    content: "";
+}
+
+.mv-main-txt::before {
+    left: 0;
+    transform: rotateZ(70deg);
+}
+
+.mv-main-txt::after {
+    right: 0;
+    transform: rotateZ(-70deg);
+}
+
+.mv-main-ttl {
+    position: relative;
+    width: 95%;
+    margin: 10px auto 0;
+    padding-top: 5px;
+    background-image: linear-gradient(to bottom, transparent 60%, #ffff00b3 40%);
+    font-size: 31px;
+    text-align: center;
+    letter-spacing: 2.5px;
+    max-width: 295px;
+}
+
+.mv-main-ttl::before,
+.mv-main-ttl::after {
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #ffff00;
+    content: "";
+    border-radius: 50%;
+}
+
+.mv-main-ttl::before {
+    left: 25px;
+}
+
+.mv-main-ttl::after {
+    left: 57px;
+}
+
+/* Opening */
+.opening-blk {
+    line-height: 1.8;
+    padding: 49px 0;
+    background: url("../image/img_opening.jpg") no-repeat center/cover;
+    text-align: center;
+}
+
+.opening-blk p:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+/* Section Positive */
+.positive-sec {
+    margin-top: -22px;
+    padding: 230px 0 6px;
+    background: url("../image/img_positive_bg.png") no-repeat center/cover;
+}
+
+.positive-card {
+    width: 100%;
+}
+
+.positive-card:nth-child(2) {
+    margin-top: -45px;
+}
+
+/* Section Info */
+.info-sec {
+    padding: 45px 0 49px;
+    background: url("../image/img_blue_cross.png") no-repeat top/100%,
+        url("../image/img_blue_cross.png") no-repeat bottom/100%, #ffff00;
+    text-align: center;
+}
+
+.info__ttl {
+    font-size: 27px;
+}
+
+.info__p-logo {
+    width: 50%;
+    margin: 20px auto;
+    max-width: 94px;
+}
+
+.info__txt {
+    line-height: 1.75;
+    margin-bottom: 26px;
+}
+
+.info-cards {
+    margin-bottom: 33px;
+}
+
+.saving,
+.usage {
+    margin-bottom: 10px;
+    padding: 13px 21px 18px 22px;
+    background-color: #ffffff;
+    border-radius: 11px;
+}
+
+.saving__ttl,
+.usage__ttl {
+    font-size: 24px;
+}
+
+.saving__txt,
+.usage__txt {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 4px;
+    background-color: #194a9c;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.saving__txt {
+    padding: 0 5px;
+    font-size: 13px;
+}
+
+.saving__item {
+    margin-right: 7px;
+}
+
+.saving__item:first-child {
+    width: 25%;
+}
+
+.saving__item:first-child .saving__img {
+    width: 100%;
+    max-width: 84px;
+}
+
+.saving__item:nth-child(2) {
+    width: 25%;
+    margin-right: 9px;
+}
+
+.saving__item:nth-child(2) .saving__img {
+    width: 94%;
+    max-width: 84px;
+}
+
+.saving__item:last-child {
+    width: 50%;
+    margin-right: 0;
+}
+
+.saving__item:last-child .saving__img {
+    width: 100%;
+    max-width: 154px;
+}
+
+.saving__item:last-child .saving__txt {
+    padding: 2px 10px 0;
+    font-size: 12px;
+}
+
+.usage__txt {
+    padding: 2px 5px;
+    font-size: 10px;
+}
+
+.saving__txt::after,
+.usage__txt::after {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #194a9c;
+    content: "";
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.saving__cnt,
+.usage__cnt {
+    display: flex;
+    padding: 13px 0 0;
+}
+
+.saving__img,
+.usage__img {
+    margin: 0 auto;
+}
+
+.usage__item:first-child {
+    width: 37%;
+}
+
+.usage__item:first-child .usage__img {
+    width: 100%;
+    max-width: 67px;
+}
+
+.usage__item:nth-child(2) {
+    width: 33%;
+}
+
+.usage__item:nth-child(2) .usage__img {
+    width: 100%;
+    max-width: 83px;
+}
+
+.usage__item:last-child {
+    width: 30%;
+}
+
+.usage__item:last-child .usage__img {
+    width: 100%;
+    max-width: 84px;
+}
+
+.usage__item:first-child .usage__txt {
+    padding: 2px 10px 0;
+}
+
+/* Common Button */
+.cmn-btn {
+    display: inline-block;
+    position: relative;
+    width: 292px;
+    margin: 0 auto;
+    padding: 13px 40px 15px;
+    border: 1px solid #014a9c;
+    background-color: #014a9c;
+    color: #ffffff;
+    border-radius: 11px;
+}
+
+.cmn-btn::after {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    width: 16px;
+    height: 16px;
+    background: url("../image/ico_white_arr.png") no-repeat center/contain;
+    content: "";
+    transform: translateY(-50%);
+}
+
+/* White Button */
+.cmn-btn.white-btn {
+    padding: 18px 33px 18px;
+    background-color: #ffffff;
+    color: #014a9c;
+    font-size: 19px;
+    border-color: #ffffff;
+}
+
+.white-btn.cmn-btn::after {
+    background: url("../image/ico_arr.png") no-repeat center/contain;
+}
+
+/*Section Point One */
+.point-one-sec {
+    position: relative;
+    padding: 258px 0 0;
+    background: url("../image/img_bgg.jpg") no-repeat center/cover;
+}
+
+.point-one__img {
+    position: absolute;
+    top: 30px;
+    left: 14px;
+    width: 56%;
+    max-width: 226px;
+}
+
+.point-one__txtimg {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    max-width: 302px;
+}
+
+.point-one__txt {
+    line-height: 1.8;
+    margin-bottom: 51px;
+    padding: 0 8.5%;
+    color: #ffffff;
+}
+
+.point-one__bnr {
+    width: 100%;
+}
+
+/* Section JR Group */
+.jr-gp-sec {
+    background-color: #ffffff;
+    padding: 16px 10px;
+}
+
+.jr-gp__box {
+    padding: 33px 0 0;
+    border: 1px solid #014a9c;
+    text-align: center;
+}
+
+.jr-gp__box .l-inner {
+    width: 95%;
+}
+
+.jr-gp__txt {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* Service */
+.service {
+    margin: 40px 0;
+}
+
+.service__heading {
+    margin-bottom: 19px;
+    padding: 13px 5px;
+    background-color: #014a9c;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.service__ttl {
+    margin-bottom: 6px;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.service__txt {
+    margin-bottom: 4px;
+    letter-spacing: 0.8px;
+}
+
+.yellowbg-no {
+    display: inline-block;
+    line-height: 1.2;
+    padding: 0 5px;
+    background-image: linear-gradient(to bottom, transparent 60%, #ffff00b3 0);
+    font-size: 18px;
+}
+
+.yellowbg-no small {
+    margin: 0 10px;
+    font-size: 45px;
+}
+
+/* Region */
+.region {
+margin-bottom: 10px;
+}
+
+.region__heading {
+    font: 400 18px/1.2 'Helvetica',sans-serif;
+letter-spacing:1.5px;
+    padding: 8px 0;
+    background: url('../image/img_shopbg.jpg')no-repeat center/cover;
+    color: #ffffff;
+}
+
+.region__cnt {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 19px 21px 2px 22px;
+}
+
+.region__cnt li{
+    width: 32%;
+    max-width: 102px;
+    margin-bottom: 5px;
+}
+.region__cnt li:not(:nth-child(3n)) {
+margin-right: 2%;
+}
+
+.note{
+    text-align: left;
+    margin-top: 17px;
+    font: 400 14px/1.2 'Hiragino Kaku Gothic stdN W3',sans-serif;
+    background-color: #f5f5f5;
+    padding: 22px 17px 27px;
+}
+
+.note p,
+.note li{
+margin-bottom: 4px;
+}
+
+/*Booking */
+.booking{
+padding: 41px 0 0;
+}
+
+.booking.web{
+    padding: 35px 0 0;
+}
+
+.booking__ttl{
+    letter-spacing: 1px;
+    line-height: 1.54;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.booking__txt{
+display: block;
+line-height: 1.85;
+letter-spacing: 0.7px;
+}
+
+.booking__cnt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+.booking__cnt li{
+    width: 41%;
+    max-width: 148px;
+    margin-bottom: 23px;
+}
+
+.booking__cnt li:nth-child(2n){
+    margin-left: 19px;
+    width: 37%;
+    max-width: 133px;
+}
+
+.booking .note{
+    margin: 6px 0 0;
+}
+
+.booking.web .booking__ttl{
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.booking.web .booking__cnt{
+    padding: 40px 0 0;
+}
+
+.booking.web .booking__cnt li{
+    width: 45%;
+    max-width: 155px;
+    margin-bottom: 23px;
+}
+
+.booking.web .booking__cnt li:nth-child(2n){
+    margin-left: 10px;
+    width: 45%;
+    max-width: 155px;
+}
+
+.booking.web .booking .note{
+    margin: 6px 0 0;
+}
+
