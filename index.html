@@ -7,6 +7,7 @@
     <title>Wester</title>
 
     <link rel="stylesheet" href="assets/css/lib/reset.css">
+    <link rel="stylesheet" href="assets/css/lib/swiper.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -282,7 +283,7 @@
                                             <li class="applestore"><a href="#"><img src="assets/image/img_appstore.png" alt="Apple Store"></a></li>
                                             <li class="playstore"><a href="#"><img src="assets/image/img_playstore.png" alt="Play Store"></a></li>
                                         </ul>
-                                        <span class="how-to-register">WESTER ID 登録方法は<a href="#">こちら</a></span>
+                                        <span class="how-to-register">WESTER ID 登録方法は<a class="js-modal-link" data-target="wester-modal">こちら</a></span>
                                     </li>
                                     <li class="register__applist">
                                         <div class="register__applogo">
@@ -292,7 +293,7 @@
                                             <li class="applestore"><a href="#"><img src="assets/image/img_appstore.png" alt="Apple Store"></a></li>
                                             <li class="playstore"><a href="#"><img src="assets/image/img_playstore.png" alt="Play Store"></a></li>
                                         </ul>
-                                        <span class="how-to-register">WESTER ID 登録方法は<a href="#">こちら</a></span>
+                                        <span class="how-to-register">WESTER ID 登録方法は<a class="js-modal-link" data-target="wespo-modal">こちら</a></span>
                                     </li>
                                 </ul>
                             </div>
@@ -361,7 +362,7 @@
 
                                 <ul class="present__content">
                                     <li class="present__item">
-                                        <p>■プレゼント内容</p>
+                                        <h3>■プレゼント内容</h3>
                                         <p>10,000ポイント 10名様<br>
                                             2,000ポイント 200名様<br>
                                             ※付与されるポイントの種類はWESTERポ<br>
@@ -369,24 +370,24 @@
                                         </p>
                                     </li>
                                     <li class="present__item">
-                                        <p>■応募期間</p>
+                                        <h3>■応募期間</h3>
                                         <p>2023年10月1日～10月31日
                                         </p>
                                     </li>
                                     <li class="present__item">
-                                        <p>■応募方法</p>
+                                        <h3>■応募方法</h3>
                                         <p>
                                             STEP1：期間中にXで「WESTER情報局＠JRW_DX_MaaS」をフォロー<br>
                                             STEP2：キャンペーン対象の投稿をリポスト
                                         </p>
                                     </li>
                                     <li class="present__item">
-                                        <p>■抽選・当選発表について</p>
+                                        <h3>■抽選・当選発表について</h3>
                                         <p>ーーーーー</p>
                                     </li>
 
                                     <li class="present__item">
-                                        <p>■禁止事項</p>
+                                        <h3>■禁止事項</h3>
                                         <ul class="present__rules">
                                             <li>※本要領・法令に違反する場合</li>
                                             <li>※本キャンペーンの運営を妨げる行為</li>
@@ -409,14 +410,14 @@
                                 </a>
                             </div>
                             <div class="banner">
-                                <h2 class="banner__txt">WESTERポイントがたまる<br>
-                                    キャンペーンが盛りだくさん！</h2>
-                                    <ul>
-                                        <li class="banner__img"><img src="assets/image/img_white_bnr.jpg" alt=""></li>
-                                        <li class="banner__img"><img src="assets/image/img_white_bnr.jpg" alt=""></li>
-                                        <li class="banner__img"><img src="assets/image/img_white_bnr.jpg" alt=""></li>
-                                    </ul>
-                                    <div class="btn">
+                                <h4 class="banner__txt">WESTERポイントがたまる<br>
+                                    キャンペーンが盛りだくさん！</h4>
+                                <ul>
+                                    <li class="banner__img"><img src="assets/image/img_white_bnr.jpg" alt=""></li>
+                                    <li class="banner__img"><img src="assets/image/img_white_bnr.jpg" alt=""></li>
+                                    <li class="banner__img"><img src="assets/image/img_white_bnr.jpg" alt=""></li>
+                                </ul>
+                                <div class="btn">
                                     <a href="#" class="cmn-btn white-btn">
                                         キャンペーン一覧はこちら
                                     </a>
@@ -426,10 +427,98 @@
                     </section><!--/.point-two-sec-->
 
                     <section class="campaign-info">
-                            <div class="l-inner">
-                                <h2 class="campaign-info__heading">キャンペーン情報
-                                </h2>
-                            </div>
+                        <div class="l-inner">
+                            <h2 class="campaign-info__heading">キャンペーン情報
+                            </h2>
+                            <ul class="campaign-info__content">
+                                <li>
+                                    <h3 class="campaign-info__content-ttl">キャンペーンタイトル</h3>
+                                    <p>WESTERポイント ウルトラPositiveDays</p>
+                                </li>
+                                <li>
+                                    <h3 class="campaign-info__content-ttl">キャンペーン期間</h3>
+                                    <p>2023年10月1日（日）00:00 ~ 10月31日（火）23:59</p>
+                                </li>
+                                <li>
+                                    <h3 class="campaign-info__content-ttl">ポイント付与について詳細</h3>
+                                    <p>
+                                        本キャンペーンにより付与されるポイントの種類はWESTERポイント（基本）です。
+                                    </p>
+                                    <h4 class="campaign-info__content-subttl">インターネット列車予約について</h4>
+                                    <p>
+                                        キャンペーン期間中を乗車日とする予約につき、通常通りのポイント付与に加え、設定されている基礎ポイントの4倍分のポイントを付与します。<br>
+                                        基礎ポイントについて詳細は<br><a href="https://www.jr-odekake.net/goyoyaku/e5489/westerpoint/#store" target="_blank" rel="noopener noreferrer">https://www.jr-odekake.net/goyoyaku/e5489/westerpoint/#store</a>
+                                    </p>
+                                    <p>※e5489の在来線チケットレスサービスご利用で付与されるポイントも対象です。
+                                    </p>
+                                    <h4 class="campaign-info__content-subttl">その他の対象サービスについて</h4>
+                                    <p>決済金額に対して通常「税込110円=1ポイント」が付与されることに加え、キャンペーン期間終了後に「ご決済いただいた税込金額÷110×4」（ポイント）を付与します。<br>
+                                        ※一部施設では、WESTER会員登録のほか、施設ごとに定められた会員組織へのご登録をいただいていない場合、ポイントの付与率が異なる場合があります。必ず各施設が設定するポイント付与条件をお確かめください。<br>
+                                        ※上記のような条件を含み、一部の取引においては通常「税込220円=1ポイント」を付与している場合がございます。この場合はキャンペーン期間後に「ご決済いただいた税込金額÷220×4」（ポイント）を付与します。<br>
+                                        ※通常のポイント付与が行われない購入については本キャンペーンの対象に含まれません。
+                                    </p>
+                                </li>
+
+                                <ul class="js-close-data">
+                                    <li>
+                                        <h3 class="campaign-info__content-ttl">ポイント付与期間</h3>
+                                        <p>本キャンペーンにおけるポイントの付与は、11月末ごろから順次実施を予定しています。<br>
+                                            ※多くのお客様のご参加が見込まれるため、すべてのご参加者様への付与完了までに1か月以上の期間をいただく場合がございます。ご了承ください。
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h3 class="campaign-info__content-ttl">キャンペーンの対象について</h3>
+                                        <p>▪︎WESTERポイントほぼ5倍の対象となるには、WESTER会員の登録（WESTER
+                                            ID取得）と、WESTERアプリまたはWESPOアプリへのWESTER IDの連携が必要です。
+                                        </p>
+
+                                        <p>▪︎会員登録方法は<a href="https://wester.jr-odekake.net/service/member/">https://wester.jr-odekake.net/service/member/</a>
+                                            をご覧ください。<br>
+                                            旧J-WEST IDをお持ちの方（J-WESTカードやSMART
+                                            ICOCAをお持ちの方など）は、新規会員登録と案内が異なるため、よくお確かめのうえご登録をお願いします。</p>
+
+                                        <p>▪︎店舗でポイントをためる際には、必ずWESTERアプリまたはWESPOアプリでバーコードをご提示ください。<br>
+                                            バーコードを提示されない場合は、通常のポイント付与および本キャンペーンによるポイント付与の対象外となります。
+                                        </p>
+                                        <p>
+                                            ▪︎必ず、使用いただくアプリへWESTER IDの連携をご完了ください。<br>
+                                            IDを連携されていない場合はキャンペーンの対象外となる場合があります。
+                                        </p>
+                                        <p>▪︎通常のポイント付与が行われない購入については本キャンペーンの対象に含まれません。</p>
+                                        <p>▪︎以下のようなポイントは、本キャンペーンの対象に含まれません。</p>
+                                        <ul>
+                                            <li>・J-WESTカードの券種や、その他会員属性を条件とする優待特典によって付与されるポイント（例：プラチナ会員＠ルクア、プレミアム会員＠さんすて）
+                                            </li>
+                                            <li>・本キャンペーンの期間中、本キャンペーンとは別のキャンペーンによって付与されるポイント</li>
+                                            <li>・ICOCAやJ-WESTカードで決済金額に応じて付与されるポイント（決済ポイント）</li>
+                                            <li>・こちら（<a href="https://www.jr-odekake.net/icoca/guide/point/point.html" target="_blank" rel="noopener noreferrer">https://www.jr-odekake.net/icoca/guide/point/point.html</a>）に示される、ICOCAのご利用によって付与されるポイント
+                                            </li>
+                                        </ul>
+                                        <p>▪︎商品の返品やご予約のキャンセル等が生じた場合に対象のお取引に対してはポイントの付与を行わない場合があります。また、キャンペーン期間後にポイントの付与を取り消す場合があります。
+                                        </p>
+                                        <p>▪︎お取引金額の20％を上回るポイントの付与はいたしかねます。</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="campaign-info__content-ttl">その他注意事項</h3>
+                                        <p>▪︎お客様の個人情報はWESTER会員プライバシーポリシー（<a href="https://wester.jr-odekake.net/terms/privacypolicy/">https://wester.jr-odekake.net/terms/privacypolicy/</a>）の記載に準じて取り扱います。
+                                        </p>
+                                        <p>
+                                            ▪︎やむを得ない事情により、本キャンペーンの運営を事前の予告なく中断・中止・終了または本キャンペーンのWEBページ及び規約に掲載されている内容を変更する場合がございます。あらかじめご了承ください。宣伝物の記載内容に関わらず、本キャンペーンの運営は規約内容に従います。
+                                        </p>
+                                        <p>▪︎これらの中断・中止・変更・終了などによるいかなる損害に対して、当社は一切の責任を負いません。</p>
+                                        <p>
+                                            ▪︎本キャンペーンの利用および閲覧は、お客様ご自身の自己責任において行われるものであり、本キャンペーンのご利用に起因するソフトウェア・ハードウェア上の事故・通信などその他のいかなるトラブル・損害・事故についても、一切責任を負いかねます。
+                                        </p>
+                                        <p>▪︎WEBサイトやアプリへの接続料および通信料は、お客様のご負担になります。</p>
+                                        <p>▪︎キャンペーンに関して、ご質問や、ポイント付与についてのお問い合わせ等はお受けできない場合がございます。</p>
+                                        <p>▪︎本WEBサイトに記載の情報は、2023年10月12日現在の情報です。</p>
+                                    </li>
+                                </ul>
+                                <button class="show-btn js-toggle-show">
+                                    <span class="js-show-txt">さらに表示</span><span class="js-close-txt">閉じる</span>
+                                </button>
+                            </ul>
+                        </div>
                     </section><!--/.campaign-info-->
                 </div>
             </div>
@@ -456,6 +545,89 @@
         </section>
     </div>
 
+
+    <div class="positive-modal js-modal" id="wester-modal">
+        <div class="positive-modal__overlay js-close-modal"></div>
+        <div class="positive-modal__content">
+            <button class="positive-modal__close-btn js-close-modal"></button>
+            <div class="positive-modal__content-inner">
+                <h2 class="positive-modal__ttl">WESTERのID連携方法</h2>
+                <div class="swiper positive-modal__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide positive-modal__slide">
+                            <span class="positive-modal__slide-number">
+                                <img src="assets/image/img_number_01.png" alt="01">
+                            </span>
+                            <div class="positive-modal__slide-img">
+                                <img src="assets/image/img_wester_modal01.png" alt="ホーム画面左上のメニューを開く">
+                            </div>
+                            <p class="positive-modal__slide-txt">ホーム画面左上のメニューを開く</p>
+                        </div>
+                        <div class="swiper-slide positive-modal__slide">
+                            <span class="positive-modal__slide-number">
+                                <img src="assets/image/img_number_02.png" alt="02">
+                            </span>
+                            <div class="positive-modal__slide-img">
+                                <img src="assets/image/img_wester_modal02.png" alt="マイページを開く">
+                            </div>
+                            <p class="positive-modal__slide-txt">マイページを開く</p>
+                        </div>
+                        <div class="swiper-slide positive-modal__slide">
+                            <span class="positive-modal__slide-number">
+                                <img src="assets/image/img_number_03.png" alt="03">
+                            </span>
+                            <div class="positive-modal__slide-img">
+                                <img src="assets/image/img_wester_modal03.png" alt="画面の案内に従って、WESTER IDの連携を完了">
+                            </div>
+                            <p class="positive-modal__slide-txt">画面の案内に従って、<br>WESTER IDの連携を完了</p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="positive-modal js-modal" id="wespo-modal">
+        <div class="positive-modal__overlay js-close-modal"></div>
+        <div class="positive-modal__content">
+            <button class="positive-modal__close-btn js-close-modal"></button>
+            <div class="positive-modal__content-inner">
+                <h2 class="positive-modal__ttl">WESPOのID連携方法</h2>
+                <div class="swiper positive-modal__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide positive-modal__slide">
+                            <span class="positive-modal__slide-number">
+                                <img src="assets/image/img_number_01.png" alt="01">
+                            </span>
+                            <div class="positive-modal__slide-img">
+                                <img src="assets/image/img_wespo_modal01.png" alt="ホーム画面に表示されるご案内の【詳細を見る】をタップ">
+                            </div>
+                            <p class="positive-modal__slide-txt">ホーム画面に表示されるご案内の<br>【詳細を見る】をタップ</p>
+                            <p class="positive-modal__slide-notice">※登録が完了している場合は表示されません。</p>
+                        </div>
+                        <div class="swiper-slide positive-modal__slide">
+                            <span class="positive-modal__slide-number">
+                                <img src="assets/image/img_number_02.png" alt="02">
+                            </span>
+                            <div class="positive-modal__slide-img">
+                                <img src="assets/image/img_wespo_modal01.png" alt="画面の案内に従って、WESPO IDの連携を完了">
+                            </div>
+                            <p class="positive-modal__slide-txt">画面の案内に従って、<br>WESPO IDの連携を完了</p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/lib/jquery.3.7.0.min.js"></script>
+    <script src="assets/js/lib/swiper.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
