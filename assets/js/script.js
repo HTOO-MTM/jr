@@ -1,26 +1,27 @@
 $(document).ready(function () {
     // Anchor Smooth Scroll
-    $(document).on('click', '.wester_positive a[href^="#"]', function (event) {
-        event.preventDefault();
+    //    $(document).on('click', '.wester_positive a[href^="#"]', function (event) {
+    //        event.preventDefault();
+    //
+    //        $('html, body').animate({
+    //            scrollTop: $($.attr(this, 'href')).offset().top
+    //        }, 500);
+    //    });
 
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top - $('.l-header').outerHeight()
-        }, 500);
-    });
-
-    // Js Hide/show Data
-    $('.js-toggle-show').on('click', function () {
+    // Js Text Show Hide
+    $('.js-toggle-txtbtn').on('click', function () {
         $(this).toggleClass('is-close');
-        if ($('.js-toggle-show').hasClass('is-close')) {
-            $('.js-close-data').addClass('is-visible');
+        if ($('.js-toggle-txtbtn').hasClass('is-close')) {
+            $('.js-close-blk').addClass('is-open');
+            $('.js-btn-txt').html("閉じる");
         }
         else {
-            $('.js-close-data').removeClass('is-visible');
+            $('.js-close-blk').removeClass('is-open');
+            $('.js-btn-txt').html("さらに表示");
         }
     });
 
     // Js Animation
-
     setTimeout(function () {
         $('.mv-anchor__img.js-bounce').each(function () {
             $(this).addClass("in");
@@ -46,22 +47,20 @@ $(document).ready(function () {
 
 
     // Modal Box
+    const body = document.body;
     const modals = document.querySelectorAll(".js-modal");
-    // Get modal open buttons
     const openModalBtns = document.querySelectorAll(".js-modal-link");
     // Initialize Swiper sliders for each modal
-    const swiperInstances = {};
-
+    const swiper = {};
     openModalBtns.forEach(function (openModalBtn) {
         openModalBtn.addEventListener("click", function () {
             const targetModalId = openModalBtn.getAttribute("data-target");
             const targetModal = document.getElementById(targetModalId);
+
             if (targetModal) {
                 targetModal.classList.add("is-active");
-
-                // Initialize Swiper if it hasn't been initialized yet
-                if (!swiperInstances[targetModalId]) {
-                    swiperInstances[targetModalId] = new Swiper(
+                if (!swiper[targetModalId]) {
+                    swiper[targetModalId] = new Swiper(
                         `#${targetModalId} .swiper`,
                         {
                             navigation: {
@@ -94,24 +93,24 @@ $(document).ready(function () {
     });
 
     // Position changes when reach in footer
-    var colorBox;
-    if ($('.l-header').find('.l-header__color-box').hasClass('.l-header__color-box')) {
-        colorBox = $('.l-header__color-box').innerHeight();
-    } else {
-        colorBox = 0
-    }
-
-    $headerheight = ($('.l-header').innerHeight() + 40) - colorBox;
-    $('.mv-anchor, .mv-campaign').css('top', $headerheight + 'px');
-    $(window).scroll(function () {
-        scrollHeight = $(document).height();
-        scrollPosition = $(window).height() + $(window).scrollTop();
-        footHeight = $(".c-wester-app").innerHeight() + $(".c-banner-block").innerHeight() + $(".l-footer").innerHeight();
-        if (scrollHeight - scrollPosition <= footHeight) {
-            $('.wester_positive__bg').css('position', 'absolute');
-        } else {
-            $('.wester_positive__bg').css('position', 'fixed');
-        }
-    });
+    //    var colorBox;
+    //    if ($('.l-header').find('.l-header__color-box').hasClass('.l-header__color-box')) {
+    //        colorBox = $('.l-header__color-box').innerHeight();
+    //    } else {
+    //        colorBox = 0
+    //    }
+    //
+    //    $headerheight = ($('.l-header').innerHeight() + 40) - colorBox;
+    //    $('.mv-anchor, .mv-campaign').css('top', $headerheight + 'px');
+    //    $(window).scroll(function () {
+    //        scrollHeight = $(document).height();
+    //        scrollPosition = $(window).height() + $(window).scrollTop();
+    //        footHeight = $(".c-wester-app").innerHeight() + $(".c-banner-block").innerHeight() + $(".l-footer").innerHeight();
+    //        if (scrollHeight - scrollPosition <= footHeight) {
+    //            $('.wester_positive__bg').css('position', 'absolute');
+    //        } else {
+    //            $('.wester_positive__bg').css('position', 'fixed');
+    //        }
+    //    });
 
 });
